@@ -3,7 +3,7 @@
 🎯🌐🔍 CAFR: Context-Aware Feature Refinement for Narrow Field-of-View Cross-View Geo-Localization
 ==================================================================================================
 [![Official Repo](http://img.shields.io/badge/Official_Code-CAFR-007ACC.svg)](https://github.com/Hobe-Frank/CAFR)
-[![Paper](http://img.shields.io/badge/Official_Dataset-CVNAF-B31B1B.svg)](https://doi.org/10.1109/JSTARS.2024.3502160)
+[![Paper](http://img.shields.io/badge/Official_Dataset-CVNAF-B31B1B.svg)](https://www.modelscope.cn/datasets/hobefrank/CVNAF)
 </div>
 
 Description 📜
