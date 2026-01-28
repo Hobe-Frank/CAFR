@@ -116,18 +116,45 @@ Key Features ✨
 
 * Provides fine-grained geometric supervision
 
-<div align="center">
 
 ## Performance Results 🚀
 
-| Method           | CVUSA Avg. R@1 | CVACT Avg. R@1 | CVNAF Avg. R@1 |
-|------------------|----------------|----------------|----------------|
-| Sample4Geo       | 48.0%          | 25.9%          | 28.3%          |
-| CV-cities        | 64.0%          | 51.5%          | 37.3%          |
-| ConGeo           | 46.5%          | 32.6%          | 28.5%          |
-| **CAFR (Ours)**  | **70.5%**      | **56.0%**      | **46.9%**      |
-
-</div>
+<table>
+  <thead>
+    <tr>
+      <th style="padding: 8px 12px; text-align: center; vertical-align: middle;">Method</th>
+      <th style="padding: 8px 12px; text-align: center; vertical-align: middle;">CVUSA Avg. R@1</th>
+      <th style="padding: 8px 12px; text-align: center; vertical-align: middle;">CVACT Avg. R@1</th>
+      <th style="padding: 8px 12px; text-align: center; vertical-align: middle;">CVNAF Avg. R@1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">Sample4Geo</td>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">48.0%</td>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">25.9%</td>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">28.3%</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">CV-cities</td>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">64.0%</td>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">51.5%</td>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">37.3%</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">ConGeo</td>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">46.5%</td>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">32.6%</td>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">28.5%</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;"><strong>CAFR (Ours)</strong></td>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;"><strong>70.5%</strong></td>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;"><strong>56.0%</strong></td>
+      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;"><strong>46.9%</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 
 Distribution of localization 🚿
