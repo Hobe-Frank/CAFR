@@ -29,16 +29,13 @@ class Configuration:
     model = 'radio_gem_cafr'
     # backbone
     backbone_arch = 'radio_v2.5-h'
-    # backbone_arch = ''
     pretrained = True
-    # layers_to_freeze = 1
-    # layers_to_crop = []
     layer1 = -1
     use_cls = True
     norm_descs = True
 
-    # Aggregator 聚合方法
-    agg_arch = 'GeM'  # CosPlace, NetVLAD, GeM
+    # Aggregator 
+    agg_arch = 'GeM' 
     agg_config = {}
     apcm_config = {'embed_dim': 1280,
                    'global_dim': 1280,
@@ -48,9 +45,6 @@ class Configuration:
                    'levels':4
                    }
 
-    # Override model image size
-    # crop_size_ratio_min = 0.5
-    # crop_size_ratio_max = 1.0
     crop_p = 1
     img_size: int = 384
 
@@ -60,21 +54,20 @@ class Configuration:
     epochs: int = 24
     batch_size: int = 24  # keep in mind real_batch_size = 2 * batch_size
     verbose: bool = True
-    # gpu_ids: tuple = (0, 1)  # GPU ids for training
     gpu_ids = [0]  # GPU ids for training
     TRAIN_CITIES = [
 
-        'Tuscany',  # 18364
-        'Salzburg',  # 10586
-        'Miami',  # 18178
-        'NewYork'  # 9971
+        'Tuscany',  
+        'Salzburg',  
+        'Miami',  
+        'NewYork'  
     ]
 
     TEST_CITIES = [
-        'Tuscany',  # 18364
-        'Salzburg',  # 10586
-        'Miami',  # 18178
-        'NewYork',  # 9971
+        'Tuscany',  
+        'Salzburg',  
+        'Miami',  
+        'NewYork',  
     ]
     # Similarity Sampling
     custom_sampling: bool = True  # use custom sampling instead of random
@@ -82,7 +75,7 @@ class Configuration:
     sim_sample: bool = True  # use similarity sampling
     neighbour_select: int = 64  # max selection size from pool
     neighbour_range: int = 128  # pool size for selection
-    gps_dict_path: str = f"/root/autodl-tmp/cross_view/CVNAF/gps_dict_{len(TRAIN_CITIES)}_cities.pkl"  # path to pre-computed distances
+    gps_dict_path: str = f"/root/autodl-tmp/cross_view/download/CVNAF/gps_dict_{len(TRAIN_CITIES)}_cities.pkl"  # path to pre-computed distances
 
     # Eval
     batch_size_eval: int = 48
@@ -105,7 +98,7 @@ class Configuration:
     lr_end: float = 0.0001  # only for "polynomial"
 
     # Dataset
-    data_folder = '/root/autodl-tmp/cross_view/CVNAF'
+    data_folder = '/root/autodl-tmp/cross_view/download/CVNAF'
 
     # Augment Images
     prob_rotate: float = 0.75  # rotates the sat image and ground images simultaneously
@@ -117,8 +110,6 @@ class Configuration:
     # Eval before training
     zero_shot: bool = False
 
-    # Checkpoint to start from
-    # checkpoint_start = '/root/autodl-tmp/code/cafr/train/cvnaf/gem_poscode/2025-12-11_090203/weights_e24_28.9411.pth'
     checkpoint_start = None
 
     # set num_workers to 0 if on Windows
@@ -169,21 +160,12 @@ if __name__ == '__main__':
 
     print("\nModel: {}".format(config.model))
 
-    # 加载模型结构
     model = RadioModel(model_name=config.model,
                        pretrained=config.pretrained,
                        img_size=config.img_size, backbone_arch=config.backbone_arch, agg_arch=config.agg_arch,
                        agg_config=config.agg_config, layer=config.layer1, pos_config=config.apcm_config)
 
     print(model)
-    # for name,param in model.named_parameters():
-    #     if 'apcm' in name:
-    #         param.requires_grad = False
-    #         print(name,'.requires_grad = False')
-    #     else:
-    #         param.requires_grad = True
-            
-        
     model_preprocess = model.model.preprocessor
     data_config = model.get_config()
     print(data_config)
@@ -192,9 +174,6 @@ if __name__ == '__main__':
     img_size = config.img_size
 
     image_size_sat = (img_size, img_size)
-
-    # new_width = config.img_size * 2
-    # new_hight = round((224 / 1232) * new_width)
     new_width = config.img_size
     new_hight = config.img_size
     img_size_ground = (new_hight, new_width)
@@ -351,7 +330,7 @@ if __name__ == '__main__':
         optimizer = torch.optim.SGD(model.parameters(), lr=config.lr)
 
     # -----------------------------------------------------------------------------#
-    # Scheduler 学习率调整/自适应优化/超参数调整等                                      #
+    # Scheduler                                  #
     # -----------------------------------------------------------------------------#
 
     train_steps = len(train_dataloader) * config.epochs
@@ -455,7 +434,7 @@ if __name__ == '__main__':
         print("\n{}[{}/Epoch: {}]{}".format(30 * "-", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time())),
                                             epoch, 30 * "-"))
 
-        train_loss, pos_loss = train(config,
+        train_loss, cafr_loss = train(config,
                                      model, epoch,
                                      dataloader=train_dataloader,
                                      loss_function=loss_function,
@@ -465,7 +444,7 @@ if __name__ == '__main__':
         # train_loss = 1
 
         print("Epoch: {}, Train Loss = {:.3f},pos Loss = {:.3f}, Lr = {:.6f}".format(epoch,
-                                                                                     train_loss, pos_loss,
+                                                                                     train_loss, cafr_loss,
                                                                                      optimizer.param_groups[0]['lr']))
         # # evaluate
 
