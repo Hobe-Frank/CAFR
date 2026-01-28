@@ -131,11 +131,11 @@ Performance Results 🚀
     <tr>
       <td style="text-align: center">Sample4Geo</td>
       <td style="text-align: center">48.0%</td>
-      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">25.9%</td>
-      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">28.3%</td>
+      <td style="text-align: center">25.9%</td>
+      <td style="text-align: center;">28.3%</td>
     </tr>
     <tr>
-      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">CV-cities</td>
+      <td style="text-align: center">CV-cities</td>
       <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">64.0%</td>
       <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">51.5%</td>
       <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">37.3%</td>
