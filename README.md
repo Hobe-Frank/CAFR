@@ -116,9 +116,8 @@ Key Features ✨
 
 * Provides fine-grained geometric supervision
 
-<div align="center">
-## Performance Results 🚀
 
+Performance Results 🚀
 <table>
   <thead>
     <tr>
@@ -130,8 +129,8 @@ Key Features ✨
   </thead>
   <tbody>
     <tr>
-      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">Sample4Geo</td>
-      <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">48.0%</td>
+      <td style="text-align: center">Sample4Geo</td>
+      <td style="text-align: center">48.0%</td>
       <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">25.9%</td>
       <td style="padding: 8px 12px; text-align: center; vertical-align: middle;">28.3%</td>
     </tr>
@@ -155,7 +154,6 @@ Key Features ✨
     </tr>
   </tbody>
 </table>
-</div>
 
 Distribution of localization 🚿
 -----------------------
