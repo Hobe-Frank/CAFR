@@ -178,7 +178,7 @@ Installation & Usage 🚂
 
 ------------------
 
-This work is supported by the Natural Science Foundation of China (Grant No.42501543). We thank the authors of:
+This work is supported by the Natural Science Foundation of China. We thank the authors of:
 
 * [AM-RADIO](https://github.com/NVlabs/RADIO) for the backbone network
 
