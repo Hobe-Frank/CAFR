@@ -20,8 +20,8 @@ def reshape_transform(tensor, height=16, width=16):
 
 
 def train(train_config, model, epoch, dataloader, loss_function, optimizer, scheduler=None, scaler=None):
-    # model.train()
-    model.eval()
+    # # model.train()
+    # model.eval()
     losses = AverageMeter()
     cafr_losses = AverageMeter()
     # wait before starting progress bar
