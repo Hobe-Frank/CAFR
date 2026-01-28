@@ -116,8 +116,8 @@ Key Features ✨
 
 * Provides fine-grained geometric supervision
 
-
 Performance Results 🚀
+--------------------------
 <table>
   <thead>
     <tr>
