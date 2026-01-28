@@ -116,17 +116,18 @@ Key Features ✨
 
 * Provides fine-grained geometric supervision
 
-Performance Results 🚀
-----------------------
+<div align="center">
 
-### State-of-the-Art Comparison
+## Performance Results 🚀
 
 | Method           | CVUSA Avg. R@1 | CVACT Avg. R@1 | CVNAF Avg. R@1 |
-| ---------------- |----------------|----------------| -------------- |
-|    Sample4Geo    |      48.0%     | 25.9%          | 28.3%          |
-|     CV-cities    | 64.0%          | 51.5%          | 37.3%          |
-|      ConGeo      | 46.5%          | 32.6%          | 28.5%          |
-|  **CAFR (Ours)** ​|  **70.5%**​     |  **56.0%**​     |  **46.9%**​     |
+|------------------|----------------|----------------|----------------|
+| Sample4Geo       | 48.0%          | 25.9%          | 28.3%          |
+| CV-cities        | 64.0%          | 51.5%          | 37.3%          |
+| ConGeo           | 46.5%          | 32.6%          | 28.5%          |
+| **CAFR (Ours)**  | **70.5%**      | **56.0%**      | **46.9%**      |
+
+</div>
 
 
 Distribution of localization 🚿
@@ -139,9 +140,7 @@ Installation & Usage 🚂
 
 ### Requirements
 
-    pip install torch torchvision
-    pip install opencv-python pillow
-    pip install numpy scipy
+    pip install -r requirements.txt
 
 ### Training
 
