@@ -124,9 +124,13 @@ Performance Results 🚀
 | Method           | CVUSA Avg. R@1 | CVACT Avg. R@1 | CVNAF Avg. R@1 |
 | ---------------- |----------------|----------------| -------------- |
 | Sample4Geo       | 48.0%          | 25.9%          | 28.3%          |
+| ---------------- |----------------|----------------| -------------- |
 | CV-cities        | 64.0%          | 51.5%          | 37.3%          |
+| ---------------- |----------------|----------------| -------------- |
 | ConGeo           | 46.5%          | 32.6%          | 28.5%          |
-| **CAFR (Ours)**​ | **70.5%**​     | **56.0%**​     | **46.9%**​     |
+| ---------------- |----------------|----------------| -------------- |
+|  **CAFR (Ours)**​ |  **70.5%**​     |  **56.0%**​     |  **46.9%**​     |
+| ---------------- |----------------|----------------| -------------- |
 
 
 Distribution of localization 🚿
@@ -145,22 +149,18 @@ Installation & Usage 🚂
 
 ### Training
 
-    python train/train_cafr.py --dataset cvnaf --backbone radio_v2.5_h
+    cd cafr/train
+    python train_cafr.py
 
-### Evaluation
-
-    python eval/eval_cafr.py --checkpoint path/to/checkpoint --dataset cvusa
 
 
 ------------------
 
 This work is supported by the Natural Science Foundation of China (Grant No.42501543). We thank the authors of:
 
-* [AM-RADIO](https://github.com/NVlabs/AM-RADIO)for the backbone network
+* [AM-RADIO](https://github.com/NVlabs/RADIO) for the backbone network
 
-* [CV-cities](https://github.com/GaoShuang98/CVCities)for baseline comparisons
-
-* [Sample4Geo](https://github.com/Skyy93/Sample4Geo)for hard negative mining strategies
+* [CV-cities](https://github.com/GaoShuang98/CVCities) and [Sample4Geo](https://github.com/Skyy93/Sample4Geo) for trainning framework
 
 * * *
 
