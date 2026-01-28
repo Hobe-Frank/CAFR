@@ -116,7 +116,7 @@ Key Features ✨
 
 * Provides fine-grained geometric supervision
 
-
+<div align="center">
 ## Performance Results 🚀
 
 <table>
@@ -155,7 +155,7 @@ Key Features ✨
     </tr>
   </tbody>
 </table>
-
+</div>
 
 Distribution of localization 🚿
 -----------------------
