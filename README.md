@@ -28,7 +28,7 @@ To address limitations of existing datasets, we constructed the **CVNAF**​ dat
 
 * Covers diverse environments: urban, rural, coastal, and mountainous regions
   
-To download this dataset, you can click: [🤗CVNAF](https://www.modelscope.cn/datasets/hobefrank/CVNAF/files).
+To download this dataset, you can click: [🤗CVNAF](https://www.modelscope.cn/datasets/hobefrank/CVNAF/files)
 
 ### Dataset Statistics 📊
 
