@@ -70,12 +70,12 @@ To download this dataset, you can click: [🤗CVNAF](https://www.modelscope.cn/d
 
 </table>
 
-### Example image 📊
+### Example image 🏞️
 
 <td style="text-align: center"><img src="figures/cvnaf_img.jpg" alt="Example image" width="600"></td>
 
 
-### CVNAF ground image statistics 📊
+### ground image statistics 🌏
 
 <td style="text-align: center"><img src="figures/statistics.jpg" alt="City distribution" width="600"></td>
 
@@ -83,7 +83,7 @@ To download this dataset, you can click: [🤗CVNAF](https://www.modelscope.cn/d
 
 Framework Architecture 🖇️
 --------------------------
-## Framework 📊️
+## Framework 🔍
 <td style="text-align: center"><img src="figures/framework.jpg" alt="framework" width="600"></td>
 
 
