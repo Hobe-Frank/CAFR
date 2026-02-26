@@ -327,7 +327,7 @@ if __name__ == '__main__':
         optimizer = torch.optim.AdamW(model.parameters(), lr=config.lr)
 
     if config.use_sgd:
-        optimizer = torch.optim.SGD(model.parameters(), lr=config.lr)
+        optimizer = torch.optim.SGD(model.parameters(), lr=config.lr,momentum=0.9,weight_decay=1e-4)
 
     # -----------------------------------------------------------------------------#
     # Scheduler                                  #
