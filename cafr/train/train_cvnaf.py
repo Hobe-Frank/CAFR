@@ -95,8 +95,7 @@ class Configuration:
     lr: float = 0.001  # 1 * 10^-4 for ViT | 1 * 10^-1 for CNN
     scheduler: str = "cosine"  # "polynomial" | "cosine" | "constant" | None
     warmup_epochs: int = 1
-    lr_end: float = 0.0001  # only for "polynomial"
-
+    lr_end: float = 0.0001
     # Dataset
     data_folder = '/root/autodl-tmp/cross_view/download/CVNAF'
 
